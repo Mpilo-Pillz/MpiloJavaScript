@@ -33,3 +33,21 @@ re = /Hel{2,}0/i // the l must occur atleast 2 times
 re = /[0-9]m{2}/ // 5mm, 6mm is accepted
 re = /([0-9]m){2}/ // 7m8m, is accepted 0mm is not accepted
 re = /^([0-9]m){3}$/ // 7m8m3m, has to be exactly number letter 3times
+
+// Shorthand character classes
+re =/\w/; // Word character - alphanumeric or _
+re = /\w/; // One or more word characters (has to be a letter, number or underscore. Other special cars will not match)
+re = /\W/; // Anthing but a letter number or underscore
+re = /\W+/; // Anthing but a letter number or underscore
+re = /\d/; // Matches any digit 0-9 match
+re = /\d+/; // Matches any digit 0-9 match and will macth all of them so it must all be numbers
+re = /\D/; // Matches non digits, so a number at the beginning will fail
+re = /\D+/; // Matches non digits, so a number found will fail
+re = /\s/; // Matches white space character ' ' works ' ' works '' does not work
+re = /\D/; // Matches non white space character ' ' does not work ' ' does not work '' does work
+re = /Mpi/i; // Matches Mpilo, Mpilo Pillz etc
+re = /Mpi\b/i; // Word boundary Matches Mpilo, Karabo Mpi  etc, will only match Mpi at the end
+
+//Assertions
+re = /t(?=a)/; //Match t only if it is followed by a eg Nikita will match so will take as will eitabaffo
+re = /t(?=!a)/; //NOT Match t only if it is followed by a eg Nikita will NOT match so will take as will eitabaffo

@@ -13,7 +13,10 @@ var numbers = [1,1,2,3,4,4]
 
 function unique(array) {
      return array.reduce((counter, arr) => {
-        return uniqueArr = counter += arr
+        // return uniqueArr = counter += arr
+        return uniqueArr = array.find(() => {
+            
+        })
     },0
    
     )   

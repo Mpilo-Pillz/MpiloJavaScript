@@ -50,4 +50,4 @@ re = /Mpi\b/i; // Word boundary Matches Mpilo, Karabo Mpi  etc, will only match 
 
 //Assertions
 re = /t(?=a)/; //Match t only if it is followed by a eg Nikita will match so will take as will eitabaffo
-re = /t(?=!a)/; //NOT Match t only if it is followed by a eg Nikita will NOT match so will take as will eitabaffo
+re = /t(?!a)/; //NOT Match t only if it is followed by a eg Nikita will NOT match so will take as will eitabaffo

@@ -4,6 +4,9 @@ var bestScores = []
 var highestScore = 0;
 var total = scores.length
 
+var NoPushBestScores = [];
+var NoPushcontainsHighestScores = [];
+
 scores.forEach((score, index) => {
     console.log(`bubble at index ${index} has a score of ${score}`);
     if(score > highestScore) {
@@ -20,13 +23,29 @@ scores.map((score, index) => {
     }
 })
 
-console.log('The solutions tested are',scores);
+for (var i = 0; i < scores.length; i++) {
+    if (scores[i] === highestScore) {
+        NoPushBestScores[i] = i
+    }
+}
+
+function removeUndefined(array) {
+   return array.filter(noscore => {
+        return noscore !== undefined;
+    })
+}
+
+console.log('We got the Juice -->',removeUndefined(NoPushBestScores));
+
+
+
+console.log('The solutions tested are ',scores);
 
 console.log(`Total Bubble Tests done is: ${total}`);
 console.log(`The highest Bubble score is: ${highestScore}`);
 console.log(`Solutions with the higest score: ${bestScores}`);
 console.log(`Indexes with the higest score: ${containsHighestScores}`);
-// console.log(`Without undefined: ${removeUndefined(bestScores)}`);
+console.log('Without undefined: ', NoPushBestScores);
 
 
 

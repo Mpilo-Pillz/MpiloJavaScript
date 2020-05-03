@@ -4,46 +4,29 @@ var bestScores = []
 var highestScore = 0;
 var total = scores.length
 
-for (var i = 0; i < total; i++) {
-    // console.log(scores[i]);
-
-    console.log(`solution at index ${i} containes #${scores[i]}`);
-    
-
-    if (highestScore < scores[i]) {
-        highestScore = scores[i];
-
-        
+scores.forEach((score, index) => {
+    console.log(`bubble at index ${index} has a score of ${score}`);
+    if(score > highestScore) {
+        highestScore = score;
     }
-  
     
-        // if(scores[i] === highestScore) {
-        //     containsHighestScores.push(highestScore);
-        //     containsHighestScores.push(scores.indexOf(highestScore))
-        // }
+});
 
-    
-}
-
-for(var i = 0; i < total; i++) {
-    if(scores[i] === highestScore) {
-        containsHighestScores.push(i)
-        // bestScores.push(highestScore)
-            bestScores[i] = scores[i]
+scores.map((score, index) => {
+    if (score === highestScore) {
+        bestScores.push(score);
+        containsHighestScores.push(index);
+        // return bestScores;
     }
-}
+})
 
-function removeUndefined(arrays) {
-   return arrays.find(arr => {
-        return arr !== undefined
-    })
-} 
+console.log('The solutions tested are',scores);
 
 console.log(`Total Bubble Tests done is: ${total}`);
 console.log(`The highest Bubble score is: ${highestScore}`);
 console.log(`Solutions with the higest score: ${bestScores}`);
 console.log(`Indexes with the higest score: ${containsHighestScores}`);
-console.log(`Without undefined: ${removeUndefined(bestScores)}`);
+// console.log(`Without undefined: ${removeUndefined(bestScores)}`);
 
 
 

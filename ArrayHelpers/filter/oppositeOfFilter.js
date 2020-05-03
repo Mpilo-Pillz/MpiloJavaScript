@@ -1,13 +1,13 @@
-// var numbers = [10, 20, 30];
+var numbers = [10, 20, 30];
 
-// function reject(array) {
-//    return array.filter((arr) => {
-//         return arr <= 10;
-//     })  
-// }
+function reject(array) {
+   return array.filter((arr) => {
+        return arr <= 10;
+    })  
+}
 
 
-// console.log(reject(numbers));
+console.log(reject(numbers));
 
 
 

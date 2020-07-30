@@ -13,7 +13,8 @@ tipCalculator(200, 15)
 
 let gradeCalculator = function (score, totalPossibleScore) {
     
-    let scorePErcentage = (score / totalPossibleScore) * 100;
+     if (typeof score === 'number' && typeof totalPossibleScore === 'number') {
+          let scorePErcentage = (score / totalPossibleScore) * 100;
     let grade;
     if (scorePErcentage >= 90 ) {
          return grade = 'A+'
@@ -37,9 +38,14 @@ let gradeCalculator = function (score, totalPossibleScore) {
     }
 
     return `you socred ${scorePErcentage.toFixed(2)}% that is a grade of ${grade}`
+     } else {
+          throw Error('Pleasue use numbers');
+     }
+    
 } 
 
-console.log(gradeCalculator(50, 90));
+try {
+     console.log(gradeCalculator(50, 90));
 console.log(gradeCalculator(60, 80));
 console.log(gradeCalculator(30, 70));
 console.log(gradeCalculator(20, 60));
@@ -47,6 +53,10 @@ console.log(gradeCalculator(30, 65));
 console.log(gradeCalculator(10, 40));
 console.log(gradeCalculator(40, 50));
 console.log(gradeCalculator(6, 10));
+} catch (e) {
+    console.log(e.message); 
+}
+
 
 
 let convertFarenheit = function(farenheit) {

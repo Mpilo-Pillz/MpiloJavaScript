@@ -18,7 +18,23 @@ class LinkedList {
         }
         node.next = this.head;
         this.head = node;
-
+    }
+    print() {
+        let current = this.head;
+        while(current) {
+            console.log(current.number);
+            current = current.next;
+        }
+        // console.log(this.head.next.next.number);
+    }
+    length() {
+        let traversedTimes = 0
+        let current = this.head;
+        while(current) {
+            traversedTimes++
+            current = current.next;
+        }
+        return traversedTimes;
     }
 }
 
@@ -27,5 +43,11 @@ class LinkedList {
 let list = new LinkedList();
 list.prepend(5);
 list.prepend(2);
-console.log(list.head);
-console.log(list.tail);
+list.prepend(3);
+list.print();
+console.log(list.length());
+
+
+// 3
+// 2
+// 5

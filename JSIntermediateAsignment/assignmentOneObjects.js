@@ -1,8 +1,10 @@
 class School {
+
     numberOfCourses = 4;
-    nameOfSchool;
+    nameOfSchool = "TooCoolSchool";
     isOldSchool = false;
     isTeachingNewTech = true;
+    nameOfStudent;
 
     course = {
        name: "JavaScript",
@@ -14,12 +16,16 @@ class School {
        } 
     }
 
+    constructor(whosSchool) {
+        this.nameOfStudent = whosSchool
+    }
+
     getSchoolName() {
         return this.nameOfSchool;
     }
 
     setSchoolName(name) {
-        this.nameOfSchool = "TooCoolSchool";
+        this.nameOfSchool = name;
     }
 
     addSubject() {
@@ -27,6 +33,7 @@ class School {
     }
 }
 
-const trueSchool = new School();
+const trueSchool = new School("Novelle");
+const cool = new School("Aisha")
 
 console.log(trueSchool.numberOfCourses)

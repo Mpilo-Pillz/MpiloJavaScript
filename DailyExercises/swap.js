@@ -57,16 +57,33 @@ class LinkedList {
 
 
 //brand new list
-let list = new LinkedList();
-list.prepend(5);
-list.prepend(2);
-list.prepend(3);
-list.append(8);
-list.print();
-console.log(list.length());
-console.log('tail-->', list.tail);
-console.log('head-->', list.head);
+// let list = new LinkedList();
+// list.prepend(5);
+// list.prepend(2);
+// list.prepend(3);
+// list.append(8);
+// list.print();
+// console.log(list.length());
+// console.log('tail-->', list.tail);
+// console.log('head-->', list.head);
 
 
+// 3
+// 2
+// 5
+let a = new ListNode(5);
+let b = new ListNode(10);
 
+// a = b;
+// b = a;
 
+function swap(a, b) {
+    var c = a;
+     a = b;
+     b = c
+    console.log(a);
+    console.log(b);
+}
+swap(a, b)
+console.log('a-->',a);
+console.log('b-->', b);

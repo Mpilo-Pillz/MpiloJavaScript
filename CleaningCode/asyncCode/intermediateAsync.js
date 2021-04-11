@@ -1,4 +1,3 @@
-const { resolve } = require('node:path');
 const readline = require('readline');
 const readlineInterface = readline.createInterface({
     input: process.stdin,

@@ -38,7 +38,7 @@ const books = [
 ]
 
 const groupingBooks = books.reduce((groupdedBooks, eachBook) => {
-    const key = Math.floor(books.rating);
+    const key = Math.floor(eachBook.rating);
     if (!groupdedBooks[key]) groupdedBooks[key] = [];
     groupdedBooks[key].push(eachBook)
     return groupdedBooks;

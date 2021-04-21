@@ -34,3 +34,13 @@ const [{ inDemand: mostPopular }, { framework }] = otherPopular;
 const [, native] = otherPopular;
 const { programmingLanguage } = native
 
+function print(engineer) {
+    const { frontEnd, backEnd, database } = engineer;
+    console.log(`mastering ${frontEnd}, ${backEnd}, and ${database} makes you a full stack developer`);
+}
+
+function printDestruc({ frontEnd, backEnd, database }) {
+    console.log(`mastering ${frontEnd}, ${backEnd}, and ${database} makes you a full stack developer`);
+}
+
+

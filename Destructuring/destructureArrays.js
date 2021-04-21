@@ -7,3 +7,16 @@ console.log(`I started coding by learning ${firstProgrammingLanguage}, but I nev
 ${dearest} holds a special place in my heart as it taught me backend, however ${gateway} will teach me the design patterns used in the industry. I think ${mvpl} will be my most valuable programming language
 Lets never forget that ${paidBills} paid the bills for almost a year but I worte my first functioning tool in ${firstUsefulTool}. I can test what i build using ${testAutomation}
 `);
+
+const response = [
+    'HTTP/1.1',
+    '200 OK',
+    'application/json'
+]
+
+function parseResponse([protocol, statuscode, contentType]) {
+    console.log(`Status: ${statuscode},
+    Protocol:${protocol},
+    ContentType: ${contentType}
+    `);
+}

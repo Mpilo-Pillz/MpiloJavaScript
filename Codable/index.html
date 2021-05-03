@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Base64 Encoding</h1>
+    <ul>
+        <li>sending binary data over a textbased protocol such as http</li>
+        <li>ensures text does not get corrupted during transfer</li>
+        <li>it does <strong>not</strong> conceal data</li>
+    </ul>
+    <hr>
+    <script>
+        const str = "stringToDecode";
+        const convertSlashEncodeTobase64 = btoa(str);
+        const decodeBackToOriginal = atob(convertSlashEncodeTobase64);
+
+        console.log(`Original: ${str}`);
+        console.log(`Base64: ${convertSlashEncodeTobase64}`);
+        console.log(`Decoded: ${decodeBackToOriginal}`);
+    </script>
+</body>
+</html>

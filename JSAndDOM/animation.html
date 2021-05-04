@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myImage = document.createElement('img');
+        myImage.src = 'https://picsum.photos/200/300'
+        myImage.style.width = '200px';
+        document.body.append(myImage);
+        myImage.style.transition = 'all 2s';
+
+        const allElements = document.body.children;
+        console.log(allElements);
+
+        const sheet = new CSSStyleSheet();
+        sheet.replaceSync('* {transition: all 2s}');
+        document.adoptedStyleSheets = [sheet];
+        
+
+        setInterval(() => {
+            for (let el of allElements) {
+                const rotation = Math.floor(Math.random() * 360);
+                const x = Math.floor(document.body.clientWidth * Math.random());
+            const y = Math.floor(document.body.clientHeight * Math.random());
+            el.style.transform = `translate(${x}px, ${y}px) rotate(${rotation})deg`;
+            }
+            const rotation = Math.floor(Math.random() * 360);
+            const x = Math.floor(document.body.clientWidth * Math.random());
+            const y = Math.floor(document.body.clientHeight * Math.random());
+            myImage.style.transform = `translate(${x}px, ${y}px)`;
+            // myImage.style.transform = `translate(${x}px, ${y}px) rotate(${rotation})deg`;
+        }, 2000)
+    </script>
+</body>
+</html>

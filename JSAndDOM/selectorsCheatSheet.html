@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="special">Something Special</p>
+
+    <input type="checkbox" name="" id="" />
+    <input type="date" name="" id="" />
+    <input type="button" value="" />
+    <input type="text" />
+    <ul>
+      <li class="special">First Item</li>
+      <i class="special">Second Item</i>
+      <li>Third Item</li>
+    </ul>
+
+    <img src="https://picsum.photos/200" alt="" id="random-photo" />
+    <!-- ul>li.special+li.special -->
+    <section>
+      <!-- section>ul>li*3 -->
+      <ul>
+        <li>Watermelon</li>
+        <li class="special">Avocado</li>
+        <li>Carrot</li>
+      </ul>
+    </section>
+    <script>
+      const specialLists = document.querySelectorAll("li.special"); //all list items with a call called special
+      const avocado = document.querySelector("section li.special"); //selects avocado
+      document.querySelector("section ul li.special"); //selects avocado
+      document.querySelector("body section ul li.special"); //selects avocado
+      const firstInput = document.querySelector("input"); // selects the first input found on the dom
+      const dateInput = document.querySelector("input[type=date]");
+      const textInput = document.querySelector("input[type='text'");
+      console.log(specialLists);
+      console.log(avocado);
+      console.log(dateInput);
+      console.log(firstInput);
+      console.log(textInput);
+
+      //the nice thing about typescript is that it helps us catch errors during development instead of at run time
+    </script>
+  </body>
+</html>

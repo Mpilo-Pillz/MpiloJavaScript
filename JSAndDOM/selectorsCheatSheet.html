@@ -1,86 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>DOM CHEATSHEET</h1>
-    <p class="special">Something Special</p>
 
-    <input type="checkbox" name="" id="" />
-    <input type="date" name="" id="" />
-    <input type="button" value="" />
-    <input type="text" />
-    <ul>
-      <li class="special">First Item</li>
-      <i class="special">Second Item</i>
-      <li>Third Item</li>
-    </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-    <p id="innerTextContent">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-      consectetur distinctio qui nobis? Blanditiis autem ratione iusto quisquam
-      quasi aut consectetur mollitia consequuntur similique, neque expedita
-      magnam ut dolor doloribus. Lorem ipsum dolor sit amet consectetur,
-      adipisicing elit. Unde, quas tempore. Laudantium culpa veritatis modi.
-      <b style="display: none"
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-        cupiditate quaerat, sint praesentium voluptatibus, dicta aliquid
-        accusantium impedit voluptatem laboriosam tenetur iusto quis voluptates
-        neque quas vero blanditiis! Ullam, autem.</b
-      >
+<body>
+  <h1>DOM CHEATSHEET</h1>
+  <p class="special">Something Special</p>
 
-      Veritatis numquam, ab amet quisquam repellat sunt culpa ipsam. Neque ipsam
-      totam voluptatibus. Numquam, reprehenderit?
-      <script>
-        console.log("eita");
-      </script>
-    </p>
+  <input type="checkbox" name="" id="" />
+  <input type="date" name="" id="" />
+  <input type="button" value="" />
+  <input type="text" />
+  <ul>
+    <li class="special">First Item</li>
+    <i class="special">Second Item</i>
+    <li>Third Item</li>
+  </ul>
 
-    <img src="https://picsum.photos/200" alt="" id="random-photo" />
-    <!-- ul>li.special+li.special -->
-    <section>
-      <!-- section>ul>li*3 -->
-      <ul>
-        <li>Watermelon</li>
-        <li class="special">Avocado</li>
-        <li>Carrot</li>
-      </ul>
-    </section>
+  <p id="innerTextContent">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+    consectetur distinctio qui nobis? Blanditiis autem ratione iusto quisquam
+    quasi aut consectetur mollitia consequuntur similique, neque expedita
+    magnam ut dolor doloribus. Lorem ipsum dolor sit amet consectetur,
+    adipisicing elit. Unde, quas tempore. Laudantium culpa veritatis modi.
+    <b style="display: none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+      cupiditate quaerat, sint praesentium voluptatibus, dicta aliquid
+      accusantium impedit voluptatem laboriosam tenetur iusto quis voluptates
+      neque quas vero blanditiis! Ullam, autem.</b>
+
+    Veritatis numquam, ab amet quisquam repellat sunt culpa ipsam. Neque ipsam
+    totam voluptatibus. Numquam, reprehenderit?
     <script>
-      const specialLists = document.querySelectorAll("li.special"); //all list items with a call called special
-      const avocado = document.querySelector("section li.special"); //selects avocado
-      document.querySelector("section ul li.special"); //selects avocado
-      document.querySelector("body section ul li.special"); //selects avocado
-      const firstInput = document.querySelector("input"); // selects the first input found on the dom
-      const dateInput = document.querySelector("input[type=date]");
-      const textInput = document.querySelector("input[type='text'");
-      const h1InnerText = document.querySelector("h1").innerText;
-      const ulInnerText = document.querySelector("ul").innerText;
-      const allTextInBody = document.body.innerText;
-      const printsTextContent = document.getElementById("innerTextContent")
-        .textContent;
-      const printsInnerText = document.getElementById("innerTextContent")
-        .innerText;
-      console.log(specialLists);
-      console.log(avocado);
-      console.log(dateInput);
-      console.log(firstInput);
-      console.log(textInput);
-      console.log(h1InnerText); //the text
-      console.log(ulInnerText); //logs the text inside each li be careful when replacing
-      console.log(allTextInBody); //gets all the text be careful when replacing
-      console.log(printsTextContent);
-      console.log(printsInnerText);
+      console.log("eita");
+    </script>
+  </p>
+
+  <img src="https://picsum.photos/200" alt="" id="random-photo" />
+  <!-- ul>li.special+li.special -->
+  <section>
+    <!-- section>ul>li*3 -->
+    <ul>
+      <li>Watermelon</li>
+      <li class="special">Avocado</li>
+      <li>Carrot</li>
+    </ul>
+  </section>
+  <script>
+    const specialLists = document.querySelectorAll("li.special"); //all list items with a call called special
+    const avocado = document.querySelector("section li.special"); //selects avocado
+    document.querySelector("section ul li.special"); //selects avocado
+    document.querySelector("body section ul li.special"); //selects avocado
+    const firstInput = document.querySelector("input"); // selects the first input found on the dom
+    const dateInput = document.querySelector("input[type=date]");
+    const textInput = document.querySelector("input[type='text'");
+    const h1InnerText = document.querySelector("h1").innerText;
+    const ulInnerText = document.querySelector("ul").innerText;
+    const allTextInBody = document.body.innerText;
+    const printsTextContent = document.getElementById("innerTextContent")
+      .textContent;
+    const printsInnerText = document.getElementById("innerTextContent")
+      .innerText;
+    console.log(specialLists);
+    console.log(avocado);
+    console.log(dateInput);
+    console.log(firstInput);
+    console.log(textInput);
+    console.log(h1InnerText); //the text
+    console.log(ulInnerText); //logs the text inside each li be careful when replacing
+    console.log(allTextInBody); //gets all the text be careful when replacing
+    console.log(printsTextContent);
+    console.log(printsInnerText);
+    console.log('computed-->', getComputedStyle(avocado));
       //the nice thing about typescript is that it helps us catch errors during development instead of at run time
 
-      /* the difference between innerText and textContent is that innerText only the text trimming excess space
-       * textContent however prints everything including formatting and anything inside html text even console.log("hello world")
-       * inside of a <script>console.log("hello world")..and the spaces/ return key spaces textContent is not ideal
-       * */
-    </script>
-  </body>
+    /* the difference between innerText and textContent is that innerText only the text trimming excess space
+     * textContent however prints everything including formatting and anything inside html text even console.log("hello world")
+     * inside of a <script>console.log("hello world")..and the spaces/ return key spaces textContent is not ideal
+     * */
+  </script>
+</body>
+
 </html>

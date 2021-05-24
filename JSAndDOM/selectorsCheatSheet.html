@@ -76,12 +76,20 @@
     console.log(printsTextContent);
     console.log(printsInnerText);
     console.log('computed-->', getComputedStyle(avocado));
-      //the nice thing about typescript is that it helps us catch errors during development instead of at run time
+    //the nice thing about typescript is that it helps us catch errors during development instead of at run time
 
     /* the difference between innerText and textContent is that innerText only the text trimming excess space
      * textContent however prints everything including formatting and anything inside html text even console.log("hello world")
      * inside of a <script>console.log("hello world")..and the spaces/ return key spaces textContent is not ideal
      * */
+
+    const parentUl = document.querySelector('ul');
+    const newLI = document.createElement('li');
+    newLI.innerText = "I am a new LI";
+
+    //  parentUl.appendChild(newLI);
+    const firstLi = document.querySelector('li.todo');
+    parentUl.insertBefore(newLI, firstLi);
   </script>
 </body>
 

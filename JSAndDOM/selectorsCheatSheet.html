@@ -90,6 +90,13 @@
     //  parentUl.appendChild(newLI);
     const firstLi = document.querySelector('li.todo');
     parentUl.insertBefore(newLI, firstLi);
+    const ul = document.querySelector("section ul");
+    const removeMe = ul.querySelector('.special') // here we only search within so we will get only one
+    //document.querySelector('.special') // here we search entire document so we will have multiple
+
+    const deleted = ul.removeChild(removeMe); //opposite is appendChild()
+    //there is remove() and append() that take in multiple
+
   </script>
 </body>
 

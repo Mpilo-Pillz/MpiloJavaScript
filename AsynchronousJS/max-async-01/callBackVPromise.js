@@ -31,3 +31,5 @@ someAsyncTask()
       "tmoving catch at the end causes it to crash if that is what you want in most cases you want that"
     );
   });
+
+  //revise promise.all and promise.race

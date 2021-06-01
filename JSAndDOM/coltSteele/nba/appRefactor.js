@@ -127,3 +127,17 @@ const gsChart = makeChart(warriorsGames, "Golden State");
 const hrChart = makeChart(warriorsGames, "Houston");
 gsSection.appendChild(gsChart);
 hrSection.appendChild(hrChart);
+
+const badPracticeButton = document.getElementById("badPractice");
+
+badPracticeButton.ondblclick = function (e) {
+  e.preventDefault();
+  console.log("doubleClicked");
+  badPracticeButton.insertAdjacentHTML('afterend', "<p>that was bad practice use addEventListner instead</p>")
+}
+
+badPracticeButton.onclick = function (e) {
+  e.preventDefault();
+  console.log("doubleClicked");
+  badPracticeButton.insertAdjacentHTML('afterend', "<p>double click button and see what happens</p>")
+}

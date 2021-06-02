@@ -109,3 +109,7 @@ for (let game of warriorsGames) {
 }
 
 document.body.prepend(ulParent);
+
+window.addEventListener('scroll', () => {
+  console.log("scrolling");
+})

@@ -17,26 +17,39 @@ function isTouching(a, b) {
 
 window.addEventListener('keyup', function (e) {
 	if (e.key === 'ArrowDown' || e.key === 'Down') {
-		const currTop = extractPos(avatar.style.top);
-		avatar.style.top = `${currTop + 50}px`;
+		moveVertical(avatar, 50);
+
 	} else if (e.key === 'ArrowUp' || e.key === 'Up') {
-		const currTop = extractPos(avatar.style.top);
-		avatar.style.top = `${currTop - 50}px`;
+		moveVertical(avatar, -50);
+		// const currTop = extractPos(avatar.style.top);
+		// avatar.style.top = `${currTop - 50}px`;
 	} else if (e.key === 'ArrowRight' || e.key === 'Right') {
-		const currLeft = extractPos(avatar.style.left);
-		avatar.style.left = `${currLeft + 50}px`;
-		//change direction of image
+		moveMoveHorizontal(avatar, 50);
 		avatar.style.transform = 'scale(1,1)';
-	} else if (e.key === 'ArrowLeft' || e.key === 'Left') {
-		const currLeft = extractPos(avatar.style.left);
-		avatar.style.left = `${currLeft - 50}px`;
+		// const currLeft = extractPos(avatar.style.left);
+		// avatar.style.left = `${currLeft + 50}px`;
 		//change direction of image
+	} else if (e.key === 'ArrowLeft' || e.key === 'Left') {
+		moveMoveHorizontal(avatar, -50);
 		avatar.style.transform = 'scale(-1,1)';
+		// const currLeft = extractPos(avatar.style.left);
+		// avatar.style.left = `${currLeft - 50}px`;
+		//change direction of image
 	}
 
 	if (isTouching(avatar, coin)) moveCoin();
 
 })
+
+const moveVertical = (element, amount) => {
+	const currTop = extractPos(element.style.top);
+	element.style.top = `${currTop + amount}px`;
+}
+
+const moveMoveHorizontal = (element, amount) => {
+	const currLeft = extractPos(element.style.left);
+	element.style.left = `${currLeft + amount}px`;
+}
 
 const extractPos = (pos) => {
 	if (!pos) return 100;

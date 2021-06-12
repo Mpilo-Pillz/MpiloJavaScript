@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>iFrame</title>
+  </head>
+  <body>
+    <h1>This is an iframe</h1>
+    <h2>also known as the receiver</h2>
+    <p id="iParagraph"></p>
+    <script>
+      window.addEventListener("message", function (message) {
+        if (message.origin === "http://some.domain.wetrust") {
+          alert(message.data); // try using exact matches
+        }
+      });
+    </script>
+  </body>
+</html>

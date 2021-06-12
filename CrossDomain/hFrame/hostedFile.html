@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <h1>this is the sender</h1>
+    <p>sends a postMessage down to the frame</p>
+    <button onclick="changeStuff()">click to change iframe content</button>
+    <iframe
+      src="http://127.0.0.1:5500/CrossDomain/iFrame/integratedFrame.html"
+      frameborder="0"
+      id="frame"
+    ></iframe>
+    <script>
+      const myIframe = document.getElementById("frame");
+
+      document.body.onload = addElement;
+
+      function addElement() {
+        // create a new div element
+        const newDiv = document.createElement("div");
+
+        // and give it some content
+        const newContent = document.createTextNode("Hi there and greetings!");
+
+        // add the text node to the newly created div
+        newDiv.appendChild(newContent);
+
+        // add the newly created element and its content into the DOM
+        const currentDiv = document.getElementById("div1");
+        document.body.insertBefore(newDiv, currentDiv);
+      }
+
+      function test() {
+        myIframe.contentWindow.postMessage("HEJ", "*");
+      }
+      function changeStuff() {
+        console.log(myIframe);
+        const iFrameWindow = myIframe.contentWindow;
+        const iFrameDocument = myIframe.contentDocument;
+        const iFrameParagraph = iFrameDocument.querySelector("#iParagraph");
+        const addElement = iFrameDocument.createElement("div");
+        addElement.appendChild(
+          document.createTextNode("this element was crea†ed by host")
+        );
+        iFrameParagraph.textContent = "this come from the host";
+        iFrameDocument.body.style.backgroundColor = "#f5f5f5";
+
+        iFrameDocument.body.insertBefore(iFrameParagraph, addElement); // not working need to investigate
+      }
+    </script>
+  </body>
+</html>

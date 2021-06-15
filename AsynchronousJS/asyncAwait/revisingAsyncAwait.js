@@ -24,3 +24,17 @@ makeRequest('Google').then(response => {
 }).catch(err => {
     console.error(err);
 })
+
+async function doWork() {
+
+    try {
+        const response = await makeRequest('Google');
+        console.log(processedResponse);
+        const processedResponse = await processedResponse(response)
+        console.log(processedResponse);
+    } catch (err) {
+        console.error(err);
+    }
+
+    doWork();
+}

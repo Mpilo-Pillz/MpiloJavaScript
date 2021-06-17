@@ -32,3 +32,13 @@ moveX(btn, 100, 1000, () => {
     });
   });
 });
+
+function request(sucessCallback, failureCalback) {
+  if (true) {
+    sucessCallback();
+  } else if (false) {
+    failureCalback();
+  } else {
+    console.log("unessasary else");
+  }
+}

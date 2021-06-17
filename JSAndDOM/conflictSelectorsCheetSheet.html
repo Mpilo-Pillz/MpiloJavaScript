@@ -45,11 +45,6 @@
     <!-- ul>li.special+li.special -->
     <section>
       <!-- section>ul>li*3 -->
-      <input type="checkbox" name="" id="" />
-      <input type="date" name="" id="" />
-      <input type="button" value="" />
-      <input type="text" />
-      number: <input type="number" name="mpilo" id="mpilo" /> --
       <ul>
         <li>Watermelon</li>
         <li class="special">Avocado</li>
@@ -92,39 +87,13 @@
       const parentUl = document.querySelector("ul");
       const newLI = document.createElement("li");
       newLI.innerText = "I am a new LI";
-    </script>
 
-    <script>
-      const specialLists = document.querySelectorAll("li.special"); //all list items with a call called special
-      const avocado = document.querySelector("section li.special"); //selects avocado
-      document.querySelector("section ul li.special"); //selects avocado
-      document.querySelector("body section ul li.special"); //selects avocado
-      const firstInput = document.querySelector("input"); // selects the first input found on the dom
-      const dateInput = document.querySelector("input[type=date]");
-      const textInput = document.querySelector("input[type='text'");
-      const h1InnerText = document.querySelector("h1").innerText;
-      const ulInnerText = document.querySelector("ul").innerText;
-      const mpilo = document.getElementById("mpilo");
-      const allTextInBody = document.body.innerText;
-      const printsTextContent =
-        document.getElementById("innerTextContent").textContent;
-      const printsInnerText =
-        document.getElementById("innerTextContent").innerText;
-      console.log(specialLists);
-      console.log(avocado);
-      console.log(dateInput);
-      console.log(firstInput);
-      console.log(textInput);
-      console.log(h1InnerText); //the text
-      console.log(ulInnerText); //logs the text inside each li be careful when replacing
-      console.log(allTextInBody); //gets all the text be careful when replacing
-      console.log(printsTextContent);
-      console.log(printsInnerText);
-      mpilo.addEventListener("input", () => {
-        console.log("--->", mpilo.value);
-        console.log("--->", typeof mpilo.value);
-      });
-      //the nice thing about typescript is that it helps us catch errors during development instead of at run time
+      //  parentUl.appendChild(newLI);
+      const firstLi = document.querySelector("li.todo");
+      parentUl.insertBefore(newLI, firstLi);
+      const ul = document.querySelector("section ul");
+      const removeMe = ul.querySelector(".special"); // here we only search within so we will get only one
+      //document.querySelector('.special') // here we search entire document so we will have multiple
 
       const deleted = ul.removeChild(removeMe); //opposite is appendChild()
       //there is remove() and append() that take in multiple

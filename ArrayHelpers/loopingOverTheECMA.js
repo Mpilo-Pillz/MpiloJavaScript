@@ -73,3 +73,8 @@ const printFrontEndTech = myListOfDictionaries.filter(
   (stack) => stack.stack === "Front End"
 );
 console.log("Array -->", printFrontEndTech);
+
+const printBackEndTech = myListOfDictionaries.find(
+  (stack) => stack.stack === "Back End"
+);
+console.log("Object returns the first one that matches-->", printBackEndTech);

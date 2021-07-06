@@ -33,7 +33,14 @@ class School {
     }
 }
 
-const trueSchool = new School("Novelle");
-const cool = new School("Aisha")
+const trueSchool = new School("Tates");
+const cool = new School("Alisha");
+
+
+
+
 
 console.log(trueSchool.numberOfCourses)
+console.log('school name is ' + trueSchool.getSchoolName())
+cool.setSchoolName("Damian");
+console.log(cool)

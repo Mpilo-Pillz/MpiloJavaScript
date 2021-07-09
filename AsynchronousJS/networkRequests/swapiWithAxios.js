@@ -16,6 +16,13 @@ fetchNExtPlanets()
     console.log("ERROR!!", err);
   });
 
+async function awaitPlanets() {
+  const res = await axios.get("https://swapi.dev/api/planets/");
+  console.log(res.data);
+}
+
+awaitPlanets();
+
 //   fetchNExtPlanets()
 //   .get("https://swapi.dev/api/planets/")
 //   .then(({ data }) => {

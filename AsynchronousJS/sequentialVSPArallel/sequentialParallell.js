@@ -40,6 +40,17 @@ async function get3ParalellPokemon() {
     console.log(poke3.data);
 }
 
+function changeBodyColor(color, delay) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            document.body.style.backgroundColor = color;
+            resolve()
+        })
+    }, delay)
+}
+
+changeBodyColor('teal', 2000)
+
 get3ParalellPokemon()
 get3ParalellUndefinedPokemon()
 get3SequentialPokemon();

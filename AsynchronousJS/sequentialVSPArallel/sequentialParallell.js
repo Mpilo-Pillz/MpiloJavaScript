@@ -45,11 +45,21 @@ function changeBodyColor(color, delay) {
         setTimeout(() => {
             document.body.style.backgroundColor = color;
             resolve()
-        })
-    }, delay)
+        }, delay)
+    })
 }
 
-changeBodyColor('teal', 2000)
+async function lightShow() {
+    await changeBodyColor('salmon', 1000);
+    await changeBodyColor('teal', 2000)
+    await changeBodyColor('orangered', 3000)
+    await changeBodyColor('indigo', 3000)
+    await changeBodyColor('violet', 3000)
+}
+
+lightShow()
+
+
 
 get3ParalellPokemon()
 get3ParalellUndefinedPokemon()

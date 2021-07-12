@@ -57,6 +57,20 @@ async function lightShow() {
     await changeBodyColor('violet', 3000)
 }
 
+async function paralellLightShow() {
+    const p1 = changeBodyColor('salmon', 1000);
+    const p2 = changeBodyColor('teal', 2000)
+    const p3 = changeBodyColor('orangered', 3000)
+    const p4 = changeBodyColor('indigo', 3000)
+    const p5 = changeBodyColor('violet', 3000)
+
+    await p1;
+    await p2;
+    await p3;
+    await p4;
+    await p5;
+}
+
 lightShow()
 
 

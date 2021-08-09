@@ -8,10 +8,18 @@ const myNestedObj = {
         lastName: 'Poolwaters'
     },
 }
-
-for (const human in Object.keys(myNestedObj)) {
-    console.log(human);
+const myItararr = []
+for (const [key, value] in Object.keys(myNestedObj)) {
+    // console.log('--', key);
+    // console.log(myNestedObj[value]);
+    // myItararr.push(myNestedObj[value])
 }
 
-console.log(Object.keys(myNestedObj));
-console.log(Object.entries(myNestedObj));
+// console.log(Object.keys(myNestedObj));
+// console.log(Object.entries(myNestedObj));
+// console.log(myItararr);
+// console.log(myNestedObj['person']);
+
+const neArr = Object.keys(myNestedObj).map(key =>
+    console.log(myNestedObj[key])
+)

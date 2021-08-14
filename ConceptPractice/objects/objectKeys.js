@@ -11,8 +11,14 @@ const myNestedObj = {
 const myItararr = [];
 for (const key in Object.values(myNestedObj)) {
   console.log("--", key);
-  // console.log(myNestedObj[key]);
-  // myItararr.push(myNestedObj[value])
+  console.log("in", myNestedObj[key]);
+  // myItararr.push(myNestedObj[value]);
+}
+
+for (const key of Object.values(myNestedObj)) {
+  console.log("of", key);
+  console.log("in", myNestedObj[key]);
+  // myItararr.push(myNestedObj[value]);
 }
 
 // console.log(Object.keys(myNestedObj));

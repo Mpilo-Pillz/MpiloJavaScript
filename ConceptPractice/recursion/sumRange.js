@@ -10,10 +10,9 @@ function sumRange(n) {
     return total
 }
 
-// console.log("sumtange-->", sumRange(3))
+console.log("sumtange-->", sumRange(3))
 
 function recursiveSumRange(n, total = 0) {
-    debugger
     total += n
 
     if (n === 0) {
@@ -24,7 +23,7 @@ function recursiveSumRange(n, total = 0) {
 
 }
 
-console.log("recursive-->", recursiveSumRange(3));
+console.log("recursive-->", recursiveSumRange(4));
 
 function cleanerVersion(n, total = 0) {
     if (n <= 0) {
@@ -34,4 +33,4 @@ function cleanerVersion(n, total = 0) {
     return cleanerVersion(n - 1, total + n)
 }
 
-// console.log("otha-->", cleanerVersion(3));
+console.log("otha-->", cleanerVersion(3));

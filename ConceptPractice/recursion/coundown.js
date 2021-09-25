@@ -16,4 +16,19 @@ function coundownRecursive(n) {
     coundownRecursive(n - 1)
 }
 
-coundownRecursive(10)
+// coundownRecursive(10)
+
+// countdown(5)
+function recursiveCountdown(n) {
+    // first we need to break out of the recursion
+    if (n <= 0) {
+        console.log("Hooray");
+        return;
+    }
+
+    console.log(n);
+    const deductOneSoNumberDecreases = n - 1;
+    recursiveCountdown(deductOneSoNumberDecreases)
+}
+
+recursiveCountdown(20)

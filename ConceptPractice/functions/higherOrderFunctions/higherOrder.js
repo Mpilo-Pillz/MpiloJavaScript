@@ -42,3 +42,21 @@ function higherOrderCalculate(operation, initialValue, arr) {
 
 document.write(higherOrderCalculate(sum, 0, myArr))
 console.log(higherOrderCalculate(multiply, 1, myArr))
+
+
+function calculateAlternative(operation, initialValue, numbers) {
+    let total = initialValue;
+    for (const number of numbers) {
+        total = operation(total, number);
+    }
+    return total;
+}
+
+const add = (n1, n2) => n1 + n2;
+const times = (n1, n2) => n1 * n2;
+
+console.log("alter-->", add(10, 20));
+console.log("alter-->", add(50, 100));
+
+// source
+// https://dmitripavlutin.com/javascript-higher-order-functions/

@@ -54,6 +54,7 @@ function calculateAlternative(operation, initialValue, numbers) {
 
 const add = (n1, n2) => n1 + n2;
 const times = (n1, n2) => n1 * n2;
+const subtract = (n1, n2) => n1 - n2;
 
 console.log("alter-->", add(10, 20));
 console.log("alter-->", add(50, 100));

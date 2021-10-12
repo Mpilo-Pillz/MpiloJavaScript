@@ -55,9 +55,19 @@ function calculateAlternative(operation, initialValue, numbers) {
 const add = (n1, n2) => n1 + n2;
 const times = (n1, n2) => n1 * n2;
 const subtract = (n1, n2) => n1 - n2;
+const divide = (n1, n2) => {
+    if (!n1 || !n2) {
+        console.error("cant divide by 0")
+        return
+    }
+    return n1 / n2
+}
 
 console.log("alter-->", add(10, 20));
-console.log("alter-->", add(50, 100));
+console.log("alter-->", times(50, 100));
+console.log("alter-->", subtract(50, 100));
+console.log("alter-->", divide(90, 30));
+console.log("alter-->", divide(0, 30));
 
 // source
 // https://dmitripavlutin.com/javascript-higher-order-functions/

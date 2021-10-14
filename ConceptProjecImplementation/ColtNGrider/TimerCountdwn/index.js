@@ -4,17 +4,26 @@ class Timer {
     this.startButton = startButton;
     this.pauseButton = pauseButton;
     this.startButton.addEventListener("click", this.start);
-  }
-
-  startError() {
-    this.importantMethodToCall();
-    console.log("Starts timer");
+    this.startButton.addEventListener("click", this.startError);
+    this.startButton.addEventListener("click", this.startBindThis.bind(this));
   }
 
   start = () => {
     this.importantMethodToCall();
     console.log("Starts timer");
   }
+
+  startBindThis() {
+    console.log("Starts and binds this comment out other event listneers");
+    this.importantMethodToCall();
+  }
+
+  startError() {
+    this.importantMethodToCall();
+    console.log("does not Starts timer but invokes an error");
+  }
+
+
 
   importantMethodToCall() {
     console.log("IMPORTANT METHOD CALLED");

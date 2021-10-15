@@ -4,13 +4,27 @@ class Timer {
     this.startButton = startButton;
     this.pauseButton = pauseButton;
     this.startButton.addEventListener("click", this.start);
-    this.startButton.addEventListener("click", this.startError);
-    this.startButton.addEventListener("click", this.startBindThis.bind(this));
+    this.pauseButton.addEventListener('click', this.pause)
+    // this.startButton.addEventListener("click", this.startError);
+    // this.startButton.addEventListener("click", this.startBindThis.bind(this));
   }
+  // interval;
 
   start = () => {
-    this.importantMethodToCall();
-    console.log("Starts timer");
+    this.tick();
+    this.interval = setInterval(this.tick, 1000);
+    console.log(this.interval); // 1
+
+    // const timer = setInterval(this.tick, 1000);
+    // this.importantMethodToCall();
+  }
+
+  pause = () => {
+    clearInterval(this.interval);
+  }
+
+  tick = () => {
+    console.log('tick');
   }
 
   startBindThis() {

@@ -1,3 +1,6 @@
+// Primitive Values are stored on the stack. Faster access - low storage space
+// Reference values are stored on the stack. Slower Access - more storage space
+
 const myInvoice = {
     created: "Today",
     author: "Mpilo",
@@ -28,4 +31,8 @@ function duplicateSpreadsheet(original) {
 
 console.log(duplicateSpreadsheet(myInvoice));
 console.log('MyInvoiceAfter', myInvoice)
+
+// With REference values there is only ever one object no copies are done
+// ass soon as a variable is asssigned to the the object it point to the same object every one is pointing to.
+// Eg I am Pillz, Mpilo, Fikasentani, The moment some one is whith Pillz the are also with Fikasentani I am not copied
 

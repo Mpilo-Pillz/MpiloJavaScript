@@ -11,6 +11,11 @@ app.get('/', (req, res) => {
     res.render("home", { rand: num })
 })
 
+app.get('/r/:subparam', (req, res) => {
+    const { subparam } = req.params;
+    res.render("subparam", { subparam })
+})
+
 
 
 app.listen(4000, () => {

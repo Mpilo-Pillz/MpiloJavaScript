@@ -11,9 +11,18 @@
 <body>
     <h1>The random number is: <%= rand %>
     </h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dicta officia hic. Deserunt rerum nostrum,
-        aliquam fugit fuga nulla earum et totam facilis, veniam voluptatibus mollitia adipisci exercitationem quidem
-        voluptatem.</p>
+    <p>The random number is <%= rand % 2===0 ? 'an EVEN' : 'a ODD' %> number </p>
+    <% if(rand % 2===0) {%>
+        <h2>This is an even number</h2>
+        <% } else { %>
+            <h3>This is an odd number</h3>
+            <% } %>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dicta officia hic. Deserunt
+                    rerum nostrum,
+                    aliquam fugit fuga nulla earum et totam facilis, veniam voluptatibus mollitia adipisci
+                    exercitationem quidem
+                    voluptatem.</p>
 </body>
 
 </html>

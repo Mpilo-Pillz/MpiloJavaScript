@@ -16,6 +16,16 @@ app.get('/r/:subparam', (req, res) => {
     res.render("subparam", { subparam })
 })
 
+app.get('/courses', (req, res) => {
+    const onlineCourses = [
+        "MERN Stack",
+        "100 Days of Python",
+        "Web dev bootcamp",
+        "NodeJS masterclass"
+    ];
+
+    res.render("courses", { onlineCourses })
+})
 
 
 app.listen(4000, () => {

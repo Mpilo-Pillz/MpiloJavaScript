@@ -55,3 +55,12 @@ for (i = 0; i < orders.length; i++) {
 }
 
 console.log({ total, withTax, highValue });
+console.log("--------------------------------------PART 2----------------------------------------------------\n");
+console.log("--------------------------------------Array Loopers helpers----------------------------------------------------\n");
+
+const ordersHelpers = [500, 30, 99, 15, 223];
+let totalHelpers = ordersHelpers.reduce((acc, cur) => acc + cur);
+const withTaxHelpers = ordersHelpers.map(v => v * 1.1);
+const highValueHelpers = ordersHelpers.filter(v => v > 100);
+
+console.log({ totalHelpers, withTaxHelpers, highValueHelpers });

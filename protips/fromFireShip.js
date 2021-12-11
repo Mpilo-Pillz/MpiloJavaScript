@@ -33,3 +33,25 @@ function horseAge(str, age) {
 const bio2 = horseAge`This horse is ${horse.age}`
 const bio1 = horseAge(`This other horse is`, horse.age)
 console.log({ bio2, bio1 });
+console.log("--------------------------------------PART 2----------------------------------------------------\n");
+console.log("--------------------------------------Array Loopers----------------------------------------------------\n");
+
+const orders = [500, 30, 99, 15, 223];
+let total = 0;
+const withTax = [];
+const highValue = [];
+
+for (i = 0; i < orders.length; i++) {
+    // Reduce
+    total += orders[i];
+
+    // Map
+    withTax.push(orders[i] * 1.1);
+
+    // Filter
+    if (orders[i] > 100) {
+        highValue.push(orders[i])
+    }
+}
+
+console.log({ total, withTax, highValue });

@@ -20,3 +20,16 @@ const deleteMe = () => console.trace("shows me the places it was called incase I
 
 deleteMe()
 deleteMe()
+
+
+const horse = {
+    age: 10
+}
+function horseAge(str, age) {
+    const ageStr = age > 5 ? 'old' : 'young';
+    return `${str[0]}${ageStr} at ${age} years`;
+}
+
+const bio2 = horseAge`This horse is ${horse.age}`
+const bio1 = horseAge(`This other horse is`, horse.age)
+console.log({ bio2, bio1 });

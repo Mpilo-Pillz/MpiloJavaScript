@@ -64,3 +64,30 @@ const withTaxHelpers = ordersHelpers.map(v => v * 1.1);
 const highValueHelpers = ordersHelpers.filter(v => v > 100);
 
 console.log({ totalHelpers, withTaxHelpers, highValueHelpers });
+
+console.log("--------------------------------------PART 3----------------------------------------------------\n");
+console.log("--------------------------------------Async----------------------------------------------------\n");
+
+const random = () => {
+    return Promise.resolve(Math.random())
+}
+
+const sumRandomAsyncNums = () => {
+    let first;
+    let second;
+    let third;
+
+    return random()
+        .then(v => {
+            first = v;
+            return random();
+        })
+        .then(v => {
+            second = v;
+            return random()
+        })
+        .then(v => {
+            third = v;
+            return random()
+        })
+}

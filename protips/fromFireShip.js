@@ -88,6 +88,15 @@ const sumRandomAsyncNums = () => {
         })
         .then(v => {
             third = v;
-            return random()
+            return `Then the Result is ${first + second + thrid}`
         })
+
+}
+
+const asyncAwaitSumRandomAsyncNums = async () => {
+    const fourth = await random();
+    const fifth = await random();
+    const sixth = await random();
+
+    console.log(`Result ${fourth + fifth + sixth}`);
 }

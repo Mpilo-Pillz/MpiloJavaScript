@@ -54,3 +54,5 @@ O   |
       |
 =========
   `];
+
+  module.exports = stages;

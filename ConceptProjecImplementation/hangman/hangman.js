@@ -31,4 +31,10 @@ while (isGameOn) {
         console.log(`CONGRATULATIONS, YOU WIN!\n You guessed the word correctly. The word was ${obsurialArray}`)
     }
 
+    if (livesLeft === 0) {
+        console.log(`GAME OVER, YOU LOOSE!.\n The word was ${wordAnswer}`);
+        isGameOn = false;
+    }
+
+
 }

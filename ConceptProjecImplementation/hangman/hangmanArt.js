@@ -1,12 +1,12 @@
 const stages = [`+---+
-|   |
-O   |
-/|\  |
-/ \  |
-    |
+ |    |
+ O    |
+/|\\  |
+/ \\  |
+      |
 =========`
-  
-,`
+
+  , `
 +---+
   |   |
   O   |
@@ -55,4 +55,4 @@ O   |
 =========
   `];
 
-  module.exports = stages;
+module.exports = stages;

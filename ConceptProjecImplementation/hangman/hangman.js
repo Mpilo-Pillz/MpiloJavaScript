@@ -3,7 +3,7 @@ const prompt = require('prompt-sync')({ sigint: true });
 const wordList = require('./hangmanWords')
 const wordAnswerPosition = (Math.floor(Math.random() * wordList.length) - 1);
 const wordAnswer = wordList[wordAnswerPosition];
-const isGameOn = true;
+let isGameOn = true;
 let livesLeft = stages.length - 1
 console.log(`psst, the answer is ${wordAnswer}`);
 const obsurialArray = wordAnswer.split('').map(letter => '_')
@@ -23,6 +23,12 @@ while (isGameOn) {
         livesLeft--;
         console.log(stages[livesLeft]);
     }
+
     console.log(obsurialArray)
+
+    if (obsurialArray.join('') === wordAnswer) {
+        isGameOn = false;
+        console.log(`CONGRATULATIONS, YOU WIN!\n You guessed the word correctly. The word was ${obsurialArray}`)
+    }
 
 }

@@ -8,15 +8,19 @@
   </head>
   <body>
     <h1>Upload Multiple files</h1>
-    <input type="file" multiple />
+    <input id="inputFile" type="file" multiple />
     <button id="btnUpload">Upload files</button>
 
     <script>
       const inFile = document.getElementById("inputFile");
       const btnUpload = document.getElementById("btnUpload");
 
+      const whatFileLoksLikeWhenLogged = [];
+
       btnUpload.addEventListener("click", () => {
         const formData = new FormData();
+
+        console.log("-->", inFile.files);
       });
     </script>
   </body>

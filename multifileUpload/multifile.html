@@ -15,12 +15,15 @@
       const inFile = document.getElementById("inputFile");
       const btnUpload = document.getElementById("btnUpload");
 
-      const whatFileLoksLikeWhenLogged = [];
-
       btnUpload.addEventListener("click", () => {
         const formData = new FormData();
 
         console.log("-->", inFile.files);
+
+        for (const file of inpFile.files) {
+          // first arg in append emulates the name attibute of an input file eg in formik
+          formData.append("myFiles", file);
+        }
       });
     </script>
   </body>

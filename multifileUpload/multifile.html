@@ -29,6 +29,11 @@
           console.log(`Key: ${key}`);
           console.log(`Value: ${value}`);
         }
+
+        fetch("http://localhost:4000/upload", {
+          method: "post",
+          body: formData,
+        }).catch(console.error);
       });
     </script>
   </body>

@@ -5,5 +5,5 @@ a.duration ||= 10;
 console.log(a.duration);
 // logs 10
 
-a.titles ||= 'title is empty'
+a.title ||= 'title is empty'
 console.log(a.title);

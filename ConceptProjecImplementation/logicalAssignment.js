@@ -15,3 +15,13 @@ console.log(`The Women's Flyweight champion is ${ufcChampions.wFlyweight ||= "cu
 console.log(`The Men's Flyweight champion is ${ufcChampions.mFlyweight ||= "currently vacant"}`)
 
 console.log(ufcChampions.heavyweight);
+
+console.log(ufcChampions)
+// prints ufcChampions = {
+  //  heavyweight: "currently vacant",
+    //strawWeight: "Zhang Weili",
+    //wFlyweight: "VALENTINA SHEVCHENKO",
+    //mFeatherweight: "ALEXANDER VOLKANOVSKI",
+    //mFlyweight: "BRANDON MORENO"
+
+//}

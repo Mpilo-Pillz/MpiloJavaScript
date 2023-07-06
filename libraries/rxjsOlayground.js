@@ -27,6 +27,15 @@ return value
     })
 )
 
+observable.subscribe({
+next(value) {
+console.log(`Your value is ${value}`);
+},
+error(err) {
+	console.error('Bad thing happened!!!', err.message)
+},
+})
+
 
 // This is specific to this tool
 observable;

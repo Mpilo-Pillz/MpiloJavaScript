@@ -25,5 +25,12 @@ console.log("Got a value", value)
   }
 })
 
+// Alternative syntax
+// observable.subscribe(
+//     (value) => console.log('Next value:', value),
+//     (err) => console.error('BAD THING!!!', err.message),
+//     () => console.log("COMPLETE")
+    
+// )
 // required by the online ide
 observable;

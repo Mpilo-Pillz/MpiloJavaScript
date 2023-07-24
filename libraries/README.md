@@ -30,3 +30,6 @@ Operators transform ot compute the values
 - Transform - Take in a value, do some processing, return a new value
 - Filtering - Modifies the flow of events in a pipe (group them together, pause thme, delete them)
 - Creation - Creates a new Observable
+
+
+subscriber and observer are used interchangeably

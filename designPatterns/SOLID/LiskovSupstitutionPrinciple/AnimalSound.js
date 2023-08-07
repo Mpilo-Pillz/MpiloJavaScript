@@ -22,6 +22,21 @@ class Cat extends Animal {
     }
 }
 
+// Violating the principle
+class Bird extends Animal {
+    fly() {
+        console.log(`${this.name} flaps wings`);
+    }
+    // to fix
+    // makeSound() {
+    //     console.log(`${this.name} chirps`)
+    // }
+}
+
+const parrot = new Bird("Nyoni")
+makeAnimalSound(parrot); // violates beciase it is not making its own sound.
+parrot.fly();
+
 function makeAnimalSound(animal) {
     animal.makeSound()
 }

@@ -1,0 +1,1 @@
+console.log(typeof (typeof ([]))) // string becuase first the inside evaluates to a 'object' and that is a string

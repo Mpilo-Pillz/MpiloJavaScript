@@ -7,3 +7,10 @@ console.log(nonExistant); // ReferenceError: nonExistant is not defined has noth
 // Null is an inential missing value
 // Null is an object which is a lie casued by a but as it is primitive
 console.log(typeof null); // object
+
+// Numbers
+let scale = 0;
+let a = 1 / scale; // Infinity
+let b = 0 / scale; // NaN
+let c = -a; // -Infinity
+let d = 1 / c; // -0

@@ -17,3 +17,26 @@ console.log("chocolate", "banana", Object.is(chocolate, banana));
 console.log("NaN === NaN", NaN === NaN); // false
 console.log("-0 === 0", -0 === 0); // true
 console.log("0 === -0", -0 === 0); // true
+
+let width = 0 / 0 // NaN
+
+let height = width * 2; // NaN
+
+console.log(width === height); // false
+console.log(Object.is(width, height)); // true
+
+function resizeImage(size) {
+    size === NaN ?
+        console.log("Something is wrong") : console.log("The check will never be true");
+
+    console.log(Number.isNaN(size))
+    console.log(Object.is(size, NaN))
+    console.log(size !== size)
+
+}
+
+let width0 = 0;
+let heigt2 = -width;
+console.log(width === height); // true
+
+console.log(Object.is(width, height)) // false

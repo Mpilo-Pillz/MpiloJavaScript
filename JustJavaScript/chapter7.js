@@ -40,3 +40,17 @@ let heigt2 = -width;
 console.log(width === height); // true
 
 console.log(Object.is(width, height)) // false
+
+// Loose Equality
+console.log([[]] == ''); // true
+console.log(true == [1]); // true
+console.log(false == [0]); // true
+const x = "x"
+if (x == null) {
+    // is the same as the one below
+}
+
+if (x === null || x === undefined) { }
+
+
+console.log(Object.is(1, '1'))

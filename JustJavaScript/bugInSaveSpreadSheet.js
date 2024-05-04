@@ -6,7 +6,7 @@ const myInvoice = {
     author: "Mpilo",
     cells: [
         [1, 2, 3, 4, 5],
-        ["a", "b", "c", "d", "d"]
+        ["a", "b", "c", "d", "e"]
     ],
     metadata: { title: "September Invoice" }
 }

@@ -10,3 +10,8 @@ let john = {
 
 john.surname = 'Lennon';
 john.address.city = 'Malibu'
+
+console.log(sherlock.surname); // "Holmes"
+console.log(sherlock.address.city); // "Malibu"
+console.log(john.surname); // "Lennon"
+console.log(john.address.city) // "Malubi"

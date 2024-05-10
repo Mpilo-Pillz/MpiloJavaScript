@@ -22,9 +22,24 @@ console.log(john.surname); // "Lennon"
 console.log("NAd this -->", john.address.city) // "Malubi"
 
 // let vs const for objects aka reference variiables
-const shrek = { speciies: 'ogre' }
+const shrek = { speciies: 'ogre' } // cannot be reassigned
 let fiona; // Changes the error on line 27 from Reference Error to Type Error
-// shrek = fiona; // Reference Error without let fiona 
+// shrek = fiona; // Reference Error without let fiona  
 
+// can still be mutated
 shrek.speciies = 'human';
 console.log(shrek.speciies); // 'human'
+
+const batman = {
+    address: {
+        city: 'Gotham'
+    }
+}
+
+// const robin = batman 
+
+batman.address = {
+    city: "Ibiza"
+}
+
+console.log(robin.address.city) // Ibiza iif line 39 is commented in

@@ -36,10 +36,13 @@ const batman = {
     }
 }
 
-// const robin = batman 
+// let robin = batman
+let robin = {
+    address: batman.address
+}
 
 batman.address = {
     city: "Ibiza"
 }
 
-console.log(robin.address.city) // Ibiza iif line 39 is commented in
+console.log(robin.address.city) // Ibiza iif line 39 is commented in, Gothan if line 40 is commented in

@@ -34,7 +34,7 @@ const batman = {
     address: {
         city: 'Gotham'
     }
-}
+} // batman -> {address} -> {city -> Gotham}  {address -> }
 
 // let robin = batman
 let robin = {
@@ -46,3 +46,17 @@ batman.address = {
 }
 
 console.log(robin.address.city) // Ibiza iif line 39 is commented in, Gothan if line 40 is commented in
+
+// Question 8 from Quiz
+let daria = {
+    address: { city: 'Lawndale' }
+}
+
+let place = daria.address;
+place.city = 'L.A'
+
+let jane = {
+    address: place
+}
+
+console.log(daria.address.city)

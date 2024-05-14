@@ -9,7 +9,7 @@ let john = {
 }
 
 john.surname = 'Lennon';
-// john.address.city = 'Malibu'
+// john.address.city = 'Malibu' // mutates
 // john.address = { city: 'Malibu' }
 john = {
     surname: 'Lennon',
@@ -30,7 +30,7 @@ let fiona; // Changes the error on line 27 from Reference Error to Type Error
 shrek.speciies = 'human';
 console.log(shrek.speciies); // 'human'
 
-const batman = {
+const batman = { // Quiz question 2
     address: {
         city: 'Gotham'
     }
@@ -53,10 +53,21 @@ let daria = {
 }
 
 let place = daria.address;
-place.city = 'L.A'
+place.city = 'L.A' // here we mutate
 
 let jane = {
     address: place
 }
 
 console.log(daria.address.city)
+
+// Quiz Question 6
+let rick = {
+    address: { city: 'C-137' }
+}
+let morty = {
+    address: rick.address
+}
+rick.address = { city: '35C' } // does not mutate
+
+console.log(morty.address.city) //

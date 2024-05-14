@@ -70,4 +70,17 @@ let morty = {
 }
 rick.address = { city: '35C' } // does not mutate
 
-console.log(morty.address.city) //
+console.log(morty.address.city) // C-137
+
+let walter = {
+    address: { city: 'Albuquerque' }
+}
+
+let gustavo = {
+    address: walter.address
+}
+
+walter = {
+    address: { city: 'Crawford' }
+} // no mutation
+console.log(gustavo.address.city) //Alburqueue

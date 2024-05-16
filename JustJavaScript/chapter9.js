@@ -84,3 +84,20 @@ walter = {
     address: { city: 'Crawford' }
 } // no mutation
 console.log(gustavo.address.city) //Alburqueue
+
+// Question 10
+let dipper = {
+    address: {
+        city: { name: 'Gravity Falls' }
+    }
+}
+
+let mabel = {
+    address: dipper.address
+}
+
+dipper.address.city = {// might be mutating
+    name: 'Land of Ooo'
+}
+
+console.log(mabel.address.city.name); // Land of Ooo

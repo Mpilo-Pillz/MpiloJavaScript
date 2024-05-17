@@ -115,15 +115,29 @@ let charlottesMom = {
 //     }
 // }
 
+// let charlotte = {
+//     mother: {
+//         age: 20
+//     },
+//     child: charlottesMom.mother
+
+// }
+
+let someAge = { age: 20 }
 let charlotte = {
-    child: charlottesMom.mother
+    child: someAge,
+    mother: someAge
 
 }
 
-console.log(charlottesMom.mother.age); // 20
+// console.log(charlottesMom.mother.age); // 20
+console.log(charlotte.mother.age); // 20
 console.log(charlotte.child.age); // 20
 
 charlotte.child.age = 21
 
-console.log(charlottesMom.mother.age); // 21
+// console.log(charlottesMom.mother.age); // 21
+console.log(charlotte.mother.age); // 21
 console.log(charlotte.child.age); // 21
+
+

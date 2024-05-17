@@ -101,3 +101,29 @@ dipper.address.city = {// might be mutating
 }
 
 console.log(mabel.address.city.name); // Land of Ooo
+
+// Question 11
+let charlottesMom = {
+    mother: {
+        age: 20
+    }
+}
+
+// let charlotte = { // does not mutate
+//     child: {
+//         age: charlottesMom.mother.age
+//     }
+// }
+
+let charlotte = {
+    child: charlottesMom.mother
+
+}
+
+console.log(charlottesMom.mother.age); // 20
+console.log(charlotte.child.age); // 20
+
+charlotte.child.age = 21
+
+console.log(charlottesMom.mother.age); // 21
+console.log(charlotte.child.age); // 21

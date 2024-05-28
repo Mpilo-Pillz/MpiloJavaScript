@@ -24,4 +24,15 @@ console.log(cake.hasOwnProperty('taste') === lie.hasOwnProperty('taste'));// fal
 lie.taste = "butter"
 console.log(cake.taste)
 
+let spider = {
+    legs: 8
+}
 
+let miles = {
+    __proto__: spider
+}
+
+miles.legs = 2
+
+console.log(miles.legs); // 2
+console.log(spider.legs); // 8

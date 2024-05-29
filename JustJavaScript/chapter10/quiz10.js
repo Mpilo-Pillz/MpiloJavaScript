@@ -36,3 +36,10 @@ miles.legs = 2
 
 console.log(miles.legs); // 2
 console.log(spider.legs); // 8
+
+let gwen = {
+    __proto__: spider
+}
+spider.legs = gwen.legs * 2;
+
+console.log(gwen.legs);

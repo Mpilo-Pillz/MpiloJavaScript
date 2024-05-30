@@ -42,4 +42,5 @@ let gwen = {
 }
 spider.legs = gwen.legs * 2;
 
-console.log(gwen.legs);
+console.log(gwen.legs); // 8 // 16 actually
+console.log("spider legs", gwen.legs); // 16

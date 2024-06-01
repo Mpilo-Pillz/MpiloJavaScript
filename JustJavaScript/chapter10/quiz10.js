@@ -44,3 +44,17 @@ spider.legs = gwen.legs * 2;
 
 console.log(gwen.legs); // 8 // 16 actually
 console.log("spider legs", gwen.legs); // 16
+
+
+// html vs css in terms of loadin
+// first time to pint
+// memory leaks and performance issues
+
+let goose = { location: 'heaven' }
+
+let cheese = { __proto__: goose }
+
+console.log(cheese === goose); // false
+console.log(cheese.location) // heaven
+goose.location = 'hell'
+console.log(cheese.location) // hell

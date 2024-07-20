@@ -26,6 +26,17 @@ test('should prevent invalid input', () => {
 
     const noText = validateInput()
     expect(noText).toBeFalse
+
+    const notaNumber = validateInput('abcd', true, true)
+    expect(notaNumber).toBeFalse
+
+    aValidNumber = validateInput("33", true, true)
+    expect(aValidNumber).toBeTrue
+
+    bValidNumber = validateInput(34, false, true)
+    expect(bValidNumber).toBeTrue
+    // aValidNumber = validateInput(33, true, true)
+    // expect(aValidNumber).toBeTrue this could be invalid becuase the textiput passes a string regardless
 })
 
 // INTEGRATION TEST

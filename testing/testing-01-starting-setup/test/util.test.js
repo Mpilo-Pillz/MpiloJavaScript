@@ -19,4 +19,9 @@ test('should generate a valid text output', () => {
     const text = checkAndGenerate('Ginindza', 32)
 
     expect(text).toBe("Ginindza (32 years old)")
+
+    const noText1 = checkAndGenerate('', 32)
+    expect(noText1).toBeUndefined;
+
+
 })

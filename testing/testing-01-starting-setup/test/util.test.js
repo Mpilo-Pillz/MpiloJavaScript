@@ -20,6 +20,9 @@ test('should prevent invalid input', () => {
 
     const emptyText = validateInput('', true, false)
     expect(emptyText).toBeFalse
+
+    const spaceText = validateInput(' ', true, false)
+    expect(spaceText).toBeFalse
 })
 
 // INTEGRATION TEST

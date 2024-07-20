@@ -23,5 +23,12 @@ test('should generate a valid text output', () => {
     const noText1 = checkAndGenerate('', 32)
     expect(noText1).toBeUndefined;
 
+    const undefinedText = checkAndGenerate('Ginindza', undefined) // unexpected truthy bug?
+    expect(undefinedText).toBeUndefined;
 
+    const zeroAgeText = checkAndGenerate('Ginindza', 0) // unexpected truthy bug?
+    expect(zeroAgeText).toBeUndefined;
+
+    const nullText = checkAndGenerate('Ginindza', null) // unexpected truthy bug?
+    expect(nullText).toBeUndefined;
 })
